@@ -1,0 +1,29 @@
+name: Windows build
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Ren'Py
+        uses: Ayowel/renpy-setup-action@v3
+        with:
+          action: install
+      - name: Lint
+        uses: Ayowel/renpy-setup-action@v3
+        with:
+          action: lint
+      - name: Package Windows game
+        uses: Ayowel/renpy-setup-action@v3
+        with:
+          action: distribute
+          packages: win
+          out_dir: dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Alexei-Windows
+          path: dist/**
+          if-no-files-found: error
