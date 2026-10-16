@@ -1,0 +1,15 @@
+{
+  "package": "com.satorinoiadeus.alexeiprimal",
+  "name": "Alexei Primal in Japan",
+  "icon_name": "Alexei Primal",
+  "version": "0.2",
+  "numeric_version": "2",
+  "orientation": "landscape",
+  "permissions": [],
+  "include_pil": false,
+  "include_sqlite": false,
+  "layout": "internal",
+  "source": false,
+  "update_icons": true,
+  "update_always": true
+}
