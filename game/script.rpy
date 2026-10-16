@@ -9,7 +9,7 @@ default reina_points = 0
 default day = 1
 
 label start:
-    scene black
+    scene bg tokyo
     centered "ALEXEI: PRIMAL IN JAPAN"
     "Tokyo. The neon flickers. A plane lands."
     a "I brought a suitcase, a steak budget, and an absolutely untested theory of romance."
@@ -17,7 +17,7 @@ label start:
     jump crossroads
 
 label crossroads:
-    scene black
+    scene bg tokyo
     "Day [day]. Where should Alexei go?"
     menu:
         "Yuna's steakhouse":
@@ -28,6 +28,8 @@ label crossroads:
             jump reina_route
 
 label yuna_route:
+    scene bg restaurant
+    show yuna_portrait at truecenter
     "Yuna, a 28-year-old chef, raises an eyebrow."
     y "You're the tall guy who ordered four steaks."
     a "One was emotionally important."
@@ -63,6 +65,8 @@ label yuna_evening:
     jump yuna_ending
 
 label mika_route:
+    scene bg gym
+    show mika_portrait at truecenter
     "Mika, a 30-year-old climbing instructor, points at the wall."
     m "Height won't solve every problem."
     a "My entire worldview is under attack."
@@ -79,6 +83,8 @@ label mika_route:
     jump continue_day
 
 label mika_evening:
+    scene bg night
+    show mika_portrait at truecenter
     "After climbing, Mika invites Alexei to a rooftop dinner."
     m "You're more fun when you're not performing."
     menu:
@@ -99,6 +105,8 @@ label mika_evening:
     jump mika_ending
 
 label reina_route:
+    scene bg bookstore
+    show reina_portrait at truecenter
     "Reina, a 32-year-old novelist, looks up from her manuscript."
     r "Are you always this loud?"
     a "Only when my inner wolf has coffee."
@@ -114,6 +122,8 @@ label reina_route:
     jump continue_day
 
 label reina_evening:
+    scene bg night
+    show reina_portrait at truecenter
     "Reina takes Alexei to a lantern-lit night market."
     r "I might write you into my next book."
     menu:
